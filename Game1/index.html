@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="score">
+            <span id="user-score">0</span>
+            <span>-</span>
+            <span id="comp-score">0</span>
+        </div>
+        <div class="second-container">
+            <div class="firstbox">
+                <h1>You</h1>
+                <div id="handsign">
+                    
+                </div>
+                <div class="handlogos" id="gameovergo">
+                    <button id="rock">Rock</button>
+                    <button id="paper">Paper</button>
+                    <button id="scissors">Scissors</button>
+                   
+                </div>
+            </div>
+        <div class="secondbox">
+            <h1>Comp</h1>
+            <div id="complogo">
+
+            </div>
+        </div>
+        </div>   
+    </div>
+    <div  class="result" id="show">
+        <div id="resulttext"></div>
+        <button onclick="playAgain()">Play Again</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

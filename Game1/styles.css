@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    color: #C890A7; 
+    font-family: 'Poppins', sans-serif;;
+}
+body{
+    background-color: #FBF5E5; 
+}
+.score{  
+    font-size: 100px;
+    text-align: center;
+}
+.second-container{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.firstbox{
+    width: 29vw;
+    height: 29vw;
+    border: 5px solid #C890A7; 
+}
+.secondbox{
+    width: 29vw;
+    height: 29vw;
+    border: 5px solid #C890A7; 
+}
+h1{
+    text-align: center;
+}
+#handsign{
+    height: 65%;
+}
+.handlogos{
+    display: flex;
+    justify-content: space-around;
+}
+.handlogos button{
+    width: 25%;
+    height: 80px;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    background-color:#FBF5E5;
+    outline: none;
+    border: 2px solid #C890A7;
+    border-radius: 15px;
+    box-shadow: 0 4px #C890A7;
+}
+.handlogos button:hover {
+    background-color: #fffdf6
+}
+.handlogos button:active{
+    background-color: #fbf2da;
+   
+    transform: translateY(4px);
+}
+
+
+
+.result{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+}
+.result div{
+    font-size: 50px;
+    text-align: center;
+}
+.result button{
+    font-size: 40px;
+    background-color: #C890A7; 
+    color: #FBF5E5;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 20px;
+}
