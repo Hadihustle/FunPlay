@@ -1,0 +1,65 @@
+body {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h3 {
+    margin: 5px;
+}
+
+.grid {
+    border: 1px solid black;
+    height: 540px;
+    width: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.grid div {
+    height: 60px;
+    width: 60px;
+}
+
+.ending-block {
+    background-color: red;
+}
+
+.starting-block {
+    background-color: blue;
+}
+
+.l1, .l2, .l3 {
+    background-image: url('log.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.l4, .l5 {
+    background-color: rgb(160, 224, 245);
+}
+
+.c1 {
+    background-image: url('car1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.c2, .c3 {
+    background-color: rgb(158,158,158);
+}
+
+.frog {
+    background-image: url('frog.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}

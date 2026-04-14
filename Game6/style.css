@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-size: larger;
+}
+
+.container {
+    text-align: center;
+}
+
+.grid {
+    width: 450px;
+    height: 450px;
+    border: solid rgb(255, 255, 255) 1px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.grid div {
+    width: 30px;
+    height: 30px;
+}
+
+.invader {
+    background-image: url('alien.gif');
+    background-size: contain;
+    border-radius: 10px;
+}
+
+.shooter {
+    background-image: url('spaceship.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+}
+
+.laser {
+    background-image: url('lazer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.boom {
+    background-image: url('blast2.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#restartButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restartButton:hover {
+    background-color: #45a049;
+}
