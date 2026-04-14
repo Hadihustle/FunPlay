@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>2D Breakout Game</title>
+    <title>Breakout - FunPlay</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1 id="score">0</h1>
-<div class="grid"></div>
-<button id="restartButton" style="display: none;">Restart</button>
+<div class="game-wrapper">
+    <header>
+        <a href="../LandingPage/home.html" class="back-btn">← Back</a>
+        <h1>🎯 Breakout Game</h1>
+        <div class="score-display">
+            <span class="stat-label">Score:</span>
+            <h1 class="score-value" id="score">0</h1>
+        </div>
+    </header>
+    <div class="game-container">
+        <div class="grid"></div>
+        <button id="restartButton" style="display: none;">Restart</button>
+    </div>
+</div>
 
 <script src="index.js"></script>
 </body>

@@ -2,82 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Frogger</title>
+    <title>Frogger - FunPlay</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <div class="game-wrapper">
+        <header>
+            <a href="../LandingPage/home.html" class="back-btn">← Back</a>
+            <h1>🐸 Frogger</h1>
+            <div class="controls">
+                <div class="stat-item">
+                    <span class="stat-label">Time:</span>
+                    <span class="stat-value" id="time-left">20</span>s
+                </div>
+                <div class="stat-item result-display">
+                    <span class="stat-label">Status:</span>
+                    <span class="stat-value" id="result">Playing</span>
+                </div>
+            </div>
+        </header>
 
-    <h3>Seconds left: <span id="time-left">20</span></h3>
-    <h3>Result: <span id="result"></span></h3>
+        <div class="game-container">
+            <div class="grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="ending-block"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="log-left l1"></div>
+                <div class="log-left l2"></div>
+                <div class="log-left l3"></div>
+                <div class="log-left l4"></div>
+                <div class="log-left l5"></div>
+                <div class="log-left l1"></div>
+                <div class="log-left l2"></div>
+                <div class="log-left l3"></div>
+                <div class="log-left l4"></div>
+                <div class="log-right l5"></div>
+                <div class="log-right l1"></div>
+                <div class="log-right l2"></div>
+                <div class="log-right l3"></div>
+                <div class="log-right l4"></div>
+                <div class="log-right l5"></div>
+                <div class="log-right l1"></div>
+                <div class="log-right l2"></div>
+                <div class="log-right l3"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="car-left c1"></div>
+                <div class="car-left c2"></div>
+                <div class="car-left c3"></div>
+                <div class="car-left c1"></div>
+                <div class="car-left c2"></div>
+                <div class="car-left c3"></div>
+                <div class="car-left c1"></div>
+                <div class="car-left c2"></div>
+                <div class="car-left c3"></div>
+                <div class="car-right c1"></div>
+                <div class="car-right c2"></div>
+                <div class="car-right c3"></div>
+                <div class="car-right c1"></div>
+                <div class="car-right c2"></div>
+                <div class="car-right c3"></div>
+                <div class="car-right c1"></div>
+                <div class="car-right c2"></div>
+                <div class="car-right c3"></div>
+                <div></div>
+            </div>
 
-    <button id="start-pause-button">Start/Pause</button>
-    <button id="restart-button" style="display: none;">Restart</button>
+            <div class="button-group">
+                <button id="start-pause-button" class="btn-control">Start/Pause</button>
+                <button id="restart-button" class="btn-control" style="display: none;">Restart</button>
+            </div>
+        </div>
+    </div>
 
-    <div class="grid">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="ending-block"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="log-left l1"></div>
-        <div class="log-left l2"></div>
-        <div class="log-left l3"></div>
-        <div class="log-left l4"></div>
-        <div class="log-left l5"></div>
-        <div class="log-left l1"></div>
-        <div class="log-left l2"></div>
-        <div class="log-left l3"></div>
-        <div class="log-left l4"></div>
-        <div class="log-right l5"></div>
-        <div class="log-right l1"></div>
-        <div class="log-right l2"></div>
-        <div class="log-right l3"></div>
-        <div class="log-right l4"></div>
-        <div class="log-right l5"></div>
-        <div class="log-right l1"></div>
-        <div class="log-right l2"></div>
-        <div class="log-right l3"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="car-left c1"></div>
-        <div class="car-left c2"></div>
-        <div class="car-left c3"></div>
-        <div class="car-left c1"></div>
-        <div class="car-left c2"></div>
-        <div class="car-left c3"></div>
-        <div class="car-left c1"></div>
-        <div class="car-left c2"></div>
-        <div class="car-left c3"></div>
-        <div class="car-right c1"></div>
-        <div class="car-right c2"></div>
-        <div class="car-right c3"></div>
-        <div class="car-right c1"></div>
-        <div class="car-right c2"></div>
-        <div class="car-right c3"></div>
-        <div class="car-right c1"></div>
-        <div class="car-right c2"></div>
-        <div class="car-right c3"></div>
-        <div></div>
+    <script src="app.js"></script>
+</body>
+</html>
         <div></div>
         <div></div>
         <div></div>

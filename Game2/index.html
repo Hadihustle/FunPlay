@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Game</title>
+    <title>Memory Game - FunPlay</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body> 
-    <header>
-        <h1>Time Left : <span id="timer">60</span></h1>
-        <h1>Score : <span id="result">0</span></h1>
-    </header>
-    <div></div>
-    <div id="grid"></div>
+<body>
+    <div class="game-wrapper">
+        <header>
+            <a href="../LandingPage/home.html" class="back-btn">← Back</a>
+            <h1>🧠 Memory Game</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Time:</span>
+                    <span class="stat-value" id="timer">60</span>s
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Score:</span>
+                    <span class="stat-value" id="result">0</span>
+                </div>
+            </div>
+        </header>
+        <div id="grid"></div>
+    </div>
     <script src="app.js"></script>
-    
 </body>
 </html>

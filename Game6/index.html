@@ -2,15 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Space Invaders</title>
+    <title>Space Invasion - FunPlay</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="results">0</h1>
-        <div class="grid"></div>
-        <button id="restartButton" style="display: none;">Restart</button>
+    <div class="game-wrapper">
+        <header>
+            <a href="../LandingPage/home.html" class="back-btn">← Back</a>
+            <h1>🚀 Space Invasion</h1>
+            <div class="score-display">
+                <span class="stat-label">Score:</span>
+                <h1 class="score-value results">0</h1>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <div class="grid"></div>
+            <button id="restartButton" class="btn-control" style="display: none;">Restart</button>
+        </div>
     </div>
+    
     <audio id="shootSound" src="shoot.wav"></audio>
     <audio id="blastSound" src="blast.wav"></audio>
     <script src="app.js"></script>

@@ -1,28 +1,137 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-image: url('bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
-    font-size: larger;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+:root {
+    --primary: #667eea;
+    --secondary: #764ba2;
+    --accent: #f093fb;
+    --light: #f7fafc;
+    --dark: #2d3748;
 }
 
-.container {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(240, 147, 251, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(102, 126, 234, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.game-wrapper {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px 30px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.back-btn {
+    background: rgba(102, 126, 234, 0.1);
+    color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary);
+}
+
+.back-btn:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateX(-5px);
+}
+
+header h1 {
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex: 1;
     text-align: center;
+    font-weight: 800;
+}
+
+.score-display {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: 2px solid var(--primary);
+}
+
+.stat-label {
+    font-weight: 600;
+    color: var(--dark);
+    opacity: 0.7;
+}
+
+.score-value {
+    font-size: 1.8rem !important;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 !important;
+}
+
+.game-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
 .grid {
     width: 450px;
     height: 450px;
-    border: solid rgb(255, 255, 255) 1px;
+    border: 3px solid transparent;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 .grid div {
@@ -33,7 +142,8 @@ body {
 .invader {
     background-image: url('alien.gif');
     background-size: contain;
-    border-radius: 10px;
+    border-radius: 5px;
+    animation: pulse 0.5s ease-in-out infinite;
 }
 
 .shooter {
@@ -46,6 +156,7 @@ body {
 }
 
 .laser {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
     background-image: url('lazer.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -57,20 +168,97 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    animation: explosion 0.3s ease-out;
 }
 
-#restartButton {
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes explosion {
+    from {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+
+#restartButton,
+.btn-control {
     display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
+    margin: 30px auto;
+    padding: 12px 35px;
+    font-size: 1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    font-family: 'Poppins', sans-serif;
 }
 
-#restartButton:hover {
-    background-color: #45a049;
+#restartButton:hover,
+.btn-control:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+#restartButton:active,
+.btn-control:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        width: 100%;
+    }
+
+    .grid {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+    }
+
+    .grid div {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .score-display {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .grid {
+        width: 100%;
+        max-width: 280px;
+        height: 280px;
+    }
+
+    .grid div {
+        width: 20px;
+        height: 20px;
+    }
 }

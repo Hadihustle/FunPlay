@@ -3,41 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors - FunPlay</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="container">
-        <div class="score">
-            <span id="user-score">0</span>
-            <span>-</span>
-            <span id="comp-score">0</span>
+    <div class="game-wrapper">
+        <div class="header">
+            <a href="../LandingPage/home.html" class="back-btn">← Back</a>
+            <h1>🎮 Rock Paper Scissors</h1>
+            <p>First to 5 wins!</p>
         </div>
-        <div class="second-container">
-            <div class="firstbox">
-                <h1>You</h1>
-                <div id="handsign">
-                    
+
+        <div class="container">
+            <div class="scoreboard">
+                <div class="score-item player-score">
+                    <span class="score-label">You</span>
+                    <span class="score-value" id="user-score">0</span>
                 </div>
-                <div class="handlogos" id="gameovergo">
-                    <button id="rock">Rock</button>
-                    <button id="paper">Paper</button>
-                    <button id="scissors">Scissors</button>
-                   
+                <div class="score-divider">VS</div>
+                <div class="score-item computer-score">
+                    <span class="score-label">Computer</span>
+                    <span class="score-value" id="comp-score">0</span>
                 </div>
             </div>
-        <div class="secondbox">
-            <h1>Comp</h1>
-            <div id="complogo">
 
+            <div class="game-arena">
+                <div class="player-section">
+                    <h2>Your Choice</h2>
+                    <div class="choice-display" id="handsign">
+                        <span class="placeholder">😊</span>
+                    </div>
+                </div>
+
+                <div class="vs-divider">
+                    <span>⚡</span>
+                </div>
+
+                <div class="computer-section">
+                    <h2>Computer's Choice</h2>
+                    <div class="choice-display" id="complogo">
+                        <span class="placeholder">🤖</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons" id="gameovergo">
+                <button class="btn btn-rock" id="rock">
+                    <span class="emoji">✊</span>
+                    <span class="text">Rock</span>
+                </button>
+                <button class="btn btn-paper" id="paper">
+                    <span class="emoji">✋</span>
+                    <span class="text">Paper</span>
+                </button>
+                <button class="btn btn-scissors" id="scissors">
+                    <span class="emoji">✌️</span>
+                    <span class="text">Scissors</span>
+                </button>
+            </div>
+
+            <div class="round-status" id="roundStatus"></div>
+        </div>
+
+        <div class="result-overlay" id="show">
+            <div class="result-card">
+                <div class="result-title" id="resulttext"></div>
+                <div class="confetti" id="confetti"></div>
+                <button class="btn btn-primary" onclick="playAgain()">🔄 Play Again</button>
+                <a href="../LandingPage/home.html" class="btn btn-secondary">🏠 Home</a>
             </div>
         </div>
-        </div>   
-    </div>
-    <div  class="result" id="show">
-        <div id="resulttext"></div>
-        <button onclick="playAgain()">Play Again</button>
     </div>
 
     <script src="index.js"></script>
