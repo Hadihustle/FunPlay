@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+
+} 
+#grid img{
+  margin: 5px;
+}
+body{
+  background-color: #C4D9FF;
+}
+header{
+  background-color: #C5BAFF;
+  display: flex;
+  justify-content: space-around;
+  padding-block: 20px;
+  margin-bottom: 100px;
+}
+
