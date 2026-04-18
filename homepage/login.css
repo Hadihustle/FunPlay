@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 45%, #3b82f6 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+.auth-page {
+    width: 100%;
+    max-width: 420px;
+}
+
+.auth-card {
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 28px;
+    box-shadow: 0 24px 80px rgba(15, 23, 42, 0.45);
+    overflow: hidden;
+    backdrop-filter: blur(16px);
+}
+
+.brand {
+    text-align: center;
+    padding: 32px 28px 20px;
+}
+
+.brand h1 {
+    font-size: 2.5rem;
+    letter-spacing: -0.05em;
+    margin-bottom: 8px;
+}
+
+.brand p {
+    color: #cbd5e1;
+    font-size: 0.96rem;
+}
+
+.switch-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 20px 20px;
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.switch-buttons button {
+    background: transparent;
+    border: none;
+    color: #cbd5e1;
+    padding: 14px 0;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.switch-buttons button.active,
+.switch-buttons button:hover {
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+    color: #fff;
+}
+
+.form-wrapper {
+    padding: 0 28px 32px;
+}
+
+.auth-form {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+.auth-form h2 {
+    margin-bottom: 8px;
+    font-size: 1.6rem;
+}
+
+.auth-form p {
+    color: #94a3b8;
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #94a3b8;
+    font-size: 0.92rem;
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(226, 232, 240, 0.15);
+    background: rgba(15, 23, 42, 0.8);
+    color: #e2e8f0;
+    font-size: 0.95rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.12);
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 30px rgba(37, 99, 235, 0.25);
+}
+
+.message {
+    margin-top: 16px;
+    min-height: 20px;
+    color: #f8fafc;
+    font-size: 0.95rem;
+}
+
+.message.error {
+    color: #f87171;
+}
+
+.message.success {
+    color: #34d399;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 460px) {
+    .auth-card {
+        border-radius: 24px;
+    }
+
+    .brand {
+        padding: 28px 20px 16px;
+    }
+
+    .form-wrapper {
+        padding: 0 20px 28px;
+    }
+}

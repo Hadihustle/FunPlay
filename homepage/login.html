@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-card">
+            <div class="brand">
+                <h1>FunPlay</h1>
+                <p>Enter to play, create account to stay.</p>
+            </div>
+
+            <div class="switch-buttons">
+                <button id="loginToggle" class="active">Login</button>
+                <button id="signupToggle">Sign Up</button>
+            </div>
+
+            <div class="form-wrapper">
+                <form id="loginForm" class="auth-form active" novalidate>
+                    <h2>Welcome back</h2>
+                    <p>Login to your account.</p>
+
+                    <label for="loginEmail">Email</label>
+                    <input id="loginEmail" type="email" placeholder="you@example.com" required />
+
+                    <label for="loginPassword">Password</label>
+                    <input id="loginPassword" type="password" placeholder="Enter password" required minlength="6" />
+
+                    <button type="submit" class="primary-btn">Login</button>
+                    <p class="message" id="loginMessage"></p>
+                </form>
+
+                <form id="signupForm" class="auth-form" novalidate>
+                    <h2>Create account</h2>
+                    <p>Sign up to join FunPlay.</p>
+
+                    <label for="signupName">Full Name</label>
+                    <input id="signupName" type="text" placeholder="Your name" required />
+
+                    <label for="signupEmail">Email</label>
+                    <input id="signupEmail" type="email" placeholder="you@example.com" required />
+
+                    <label for="signupPassword">Password</label>
+                    <input id="signupPassword" type="password" placeholder="Create password" required minlength="6" />
+
+                    <button type="submit" class="primary-btn">Sign Up</button>
+                    <p class="message" id="signupMessage"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
