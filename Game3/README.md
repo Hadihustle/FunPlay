@@ -1,2 +1,2 @@
 # Game3-Whac-a-Mole
-Deploy Link : https://rainbow-lebkuchen-96ca3d.netlify.app/
+Deploy Link : https://dancing-beijinho-b4bdd7.netlify.app/
